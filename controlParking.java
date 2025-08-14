@@ -8,7 +8,7 @@ public class controlParking {
     public LocalTime pedirHora() {
         Scanner lector = new Scanner(System.in);
 
-        System.out.print("Ingrese la hora (0-23): ");
+        System.out.print("Ingrese la hora de llegada (0-23): ");
         int hora = lector.nextInt();
         while (hora > 23 || hora < 0) {
             System.out.println("""
@@ -19,7 +19,7 @@ public class controlParking {
             hora = lector.nextInt();
         }
 
-        System.out.print("Ingrese los minutos (0-59): ");
+        System.out.print("Ingrese los minutos de llegada (0-59): ");
         int minutos = lector.nextInt();
         while (minutos > 59 || minutos < 0) {
             System.out.println("""
@@ -99,3 +99,4 @@ public class controlParking {
         util.compararHoras(horaLlegada, horaSalida, precioHora);
     }
 }
+
